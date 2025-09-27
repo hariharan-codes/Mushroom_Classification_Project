@@ -9,11 +9,11 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 1. **Data Preprocessing & Feature Encoding**
 
    * Loaded the [Kaggle Mushroom Classification Dataset](https://www.kaggle.com/uciml/mushroom-classification).
-   * Applied label encoding for categorical variables.
-   * Split data into training and test sets.
+   * Applied label encoding for categorical features.
+   * Created training and test splits.
 
 2. **Model Training**
-   Trained and compared 6 ML models:
+   Trained and compared performance across 6 ML models:
 
    * Logistic Regression
    * Decision Tree
@@ -24,20 +24,20 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 
 3. **Experiment Tracking with MLflow**
 
-   * Logged metrics, parameters, and artifacts.
-   * Compared performance using MLflow UI.
-   * Selected the best-performing model.
+   * Logged metrics, parameters, and artifacts for all models.
+   * Compared experiments visually in MLflow UI.
+  
 
 4. **Dockerization**
 
-   * Dockerfile created to package backend (FastAPI) + frontend (Streamlit).
-   * Dependencies pinned in `requirements.txt`.
+   * Created Dockerfile for backend (FastAPI) + frontend (Streamlit).
+   * Pinned dependencies with `requirements.txt`.
 
 5. **Deployment on Render**
 
-   * **FastAPI** serves the REST API for predictions.
-   * **Streamlit** provides an interactive UI.
-   * Both deployed seamlessly using **Render**.
+   * **FastAPI** serves REST API for predictions.
+   * **Streamlit** provides an interactive web app.
+   * Both deployed seamlessly via **Render**.
 
 ---
 
@@ -45,15 +45,31 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 
 ```
 MUSHROOM_CLASSIFICATION_PROJECT/
-├── data/            # Datasets
-├── frontend/        # Streamlit app
-├── models/          # Saved models
-├── src/             # FastAPI backend & utils
-├── train.py         # Training + MLflow logging
-├── requirements.txt # Dependencies
-├── Dockerfile       # Docker config
-├── start.sh         # Startup script
-└── README.md        # Documentation
+│
+├── data/                
+│   ├── raw/              # Original dataset
+│   └── processed/        # Cleaned & encoded datasets
+│
+├── frontend/             # Streamlit frontend
+│   ├── pages/            # Multi-page setup (e.g., prediction page)
+│   │   └── 1_Predict.py
+│   ├── utils/            # Frontend utilities
+│   │   └── api_client.py
+│   └── streamlit_main.py # Streamlit app entrypoint
+│
+├── models/               # Trained/saved models
+│
+├── src/                  # FastAPI backend + utilities
+│   ├── api.py            # REST API entrypoint
+│   ├── predict.py        # Prediction logic
+│   ├── utils.py          # Helper functions
+│   └── enums.py          # Enums/constants
+│
+├── train.py              # Training + MLflow logging
+├── requirements.txt      # Dependencies
+├── Dockerfile            # Docker build config
+├── start.sh              # Script to launch FastAPI + Streamlit
+└── README.md             # Documentation
 ```
 
 ---
@@ -83,8 +99,7 @@ MUSHROOM_CLASSIFICATION_PROJECT/
 
    ```bash
    python -m venv myenv
-   source myenv/bin/activate   # Linux/Mac
-   myenv\Scripts\activate      # Windows
+   myenv\Scripts\activate     
    ```
 
 3. Install dependencies:
@@ -93,13 +108,13 @@ MUSHROOM_CLASSIFICATION_PROJECT/
    pip install -r requirements.txt
    ```
 
-4. Start the backend (FastAPI):
+4. Start backend (FastAPI):
 
    ```bash
    uvicorn src.api:app --reload --host 0.0.0.0 --port 8000
    ```
 
-5. Start the frontend (Streamlit):
+5. Start frontend (Streamlit):
 
    ```bash
    streamlit run frontend/streamlit_main.py
@@ -109,13 +124,13 @@ MUSHROOM_CLASSIFICATION_PROJECT/
 
 ## 🐳 Run with Docker
 
-1. Build the Docker image:
+1. Build Docker image:
 
    ```bash
    docker build -t mushroom-classifier .
    ```
 
-2. Run the container:
+2. Run container:
 
    ```bash
    docker run -p 8000:8000 -p 8501:8501 mushroom-classifier
@@ -125,16 +140,16 @@ MUSHROOM_CLASSIFICATION_PROJECT/
 
 ## 🌐 Deployment
 
-* **Backend:** FastAPI REST API on Render
-* **Frontend:** Streamlit UI on Render
-* **Containerization:** Docker ensures consistent environments
+* **Backend:** FastAPI REST API deployed on Render
+* **Frontend:** Streamlit app deployed on Render
+* **Containerization:** Docker ensures reproducibility
 
 ---
 
 ## 📊 Results
 
-* All models logged in MLflow with metrics.
-* Best model selected based on **Accuracy** and **F1-score**.
-* Interactive frontend lets users classify mushrooms as **Edible** or **Poisonous**.
+* Metrics & parameters logged in MLflow.
+* Compared models on accuracy & F1-score.
+* Streamlit app allows users to classify mushrooms as **Edible** or **Poisonous** interactively.
 
 ---
