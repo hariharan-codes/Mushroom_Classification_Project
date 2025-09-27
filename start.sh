@@ -11,4 +11,4 @@ uvicorn src.api:app --host 0.0.0.0 --port $FASTAPI_PORT &
 
 # Start Streamlit in the foreground so the container doesn't exit
 echo "Starting Streamlit on port $STREAMLIT_PORT..."
-exec streamlit run frontend/home.py --server.port $STREAMLIT_PORT --server.address 0.0.0.0
+exec streamlit run frontend/streamlit_main.py --server.port $STREAMLIT_PORT --server.address 0.0.0.0
