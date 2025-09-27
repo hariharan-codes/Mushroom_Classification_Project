@@ -42,41 +42,42 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 
 ## 📂 Project Structure
 
-MUSHROOM_CLASSIFICATION_PROJECT
-│── data
-│   ├── processed
-│   └── raw
+MUSHROOM_CLASSIFICATION_PROJECT/
 │
-│── frontend
-│   ├── background
-│   ├── pages
-│   │   └── 1_Predict.py
-│   ├── utils
-│   │   └── api_client.py
-│   └── streamlit_main.py
+├── data/                           # Dataset storage
+│   ├── processed/                   # Cleaned & encoded datasets
+│   └── raw/                         # Original/raw datasets
 │
-│── mlruns
-│   ├── .trash
-│   ├── 0
-│   └── 899880467396796702
+├── frontend/                        # Streamlit frontend app
+│   ├── background/                  # Static assets (images, css, etc.)
+│   ├── pages/                       # Multipage Streamlit app
+│   │   └── 1_Predict.py             # Prediction page
+│   ├── utils/                       # Helper functions
+│   │   └── api_client.py            # Client to call FastAPI backend
+│   └── streamlit_main.py            # Streamlit entrypoint
 │
-│── models
+├── mlruns/                          # MLflow experiment tracking
+│   ├── .trash/                      
+│   ├── 0/                           # Default experiment
+│   └── 899880467396796702/          # Experiment runs
 │
-│── myenv
+├── models/                          # Trained models (saved artifacts)
 │
-│── src
-│   ├── __pycache__
+├── myenv/                           # Virtual environment (should be in .gitignore)
+│
+├── src/                             # Backend (FastAPI + utilities)
 │   ├── __init__.py
-│   ├── api.py
-│   ├── enums.py
-│   ├── predict.py
-│   └── utils.py
+│   ├── api.py                       # FastAPI app entry
+│   ├── enums.py                     # Enums/constants
+│   ├── predict.py                   # Prediction logic
+│   └── utils.py                     # Utility functions (preprocessing, etc.)
 │
-│── Dockerfile
-│── README.md
-│── requirements.txt
-│── start.sh
-└── train.py      
+├── Dockerfile                       # Docker build config
+├── README.md                        # Project documentation
+├── requirements.txt                 # Dependencies
+├── start.sh                         # Startup script (FastAPI + Streamlit)
+└── train.py                         # Script to train and log models in MLflow
+      
 ```
 
 ---
@@ -153,6 +154,7 @@ MUSHROOM_CLASSIFICATION_PROJECT
 * Models compared in MLflow UI
 * Best model selected based on accuracy & F1 score
 * Fully interactive frontend allows users to classify mushrooms as **Edible** or **Poisonous**
+
 
 
 
