@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/shari/Documents/Sem%203/MLops/Project/mushroom_classification_project/mlruns/899880467396796702/4d12f7ff91f847e7b9a2e09ffe2d4c8f/artifacts
+end_time: 1758953231522
+entry_point_name: ''
+experiment_id: '899880467396796702'
+lifecycle_stage: active
+run_id: 4d12f7ff91f847e7b9a2e09ffe2d4c8f
+run_name: decision_tree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758953227955
+status: 3
+tags: []
+user_id: shari

@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/shari/Documents/Sem%203/MLops/Project/mushroom_classification_project/mlruns/899880467396796702/models/m-545cf346114747208ea546657f046dde/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.4.0
+model_id: m-545cf346114747208ea546657f046dde
+model_size_bytes: 100464
+model_uuid: m-545cf346114747208ea546657f046dde
+prompts: null
+run_id: 0ff390fdc8e4435eb976e1b2c9f2d742
+utc_time_created: '2025-09-27 06:07:00.816580'

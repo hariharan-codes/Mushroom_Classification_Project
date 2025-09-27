@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/shari/Documents/Sem%203/MLops/Project/mushroom_classification_project/mlruns/899880467396796702/models/m-572f27bcb6bc40adad05f5d2429d62b8/artifacts
+creation_timestamp: 1758953224705
+experiment_id: '899880467396796702'
+last_updated_timestamp: 1758953227838
+model_id: m-572f27bcb6bc40adad05f5d2429d62b8
+model_type: null
+name: model
+source_run_id: 95035765fd7743698e83f26e2cc02777
+status: 2
+status_message: null

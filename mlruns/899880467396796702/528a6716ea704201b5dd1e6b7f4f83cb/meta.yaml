@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/shari/Documents/Sem%203/MLops/Project/mushroom_classification_project/mlruns/899880467396796702/528a6716ea704201b5dd1e6b7f4f83cb/artifacts
+end_time: 1758953220514
+entry_point_name: ''
+experiment_id: '899880467396796702'
+lifecycle_stage: active
+run_id: 528a6716ea704201b5dd1e6b7f4f83cb
+run_name: random_forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758953214256
+status: 3
+tags: []
+user_id: shari
