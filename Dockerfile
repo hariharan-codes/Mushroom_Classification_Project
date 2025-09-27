@@ -1,20 +1,14 @@
-# Base image
-FROM python:3.12-slim
+FROM python:3.9
 
-# Set workdir
 WORKDIR /app
 
-# Copy project files
-COPY . /app
-
-# Install dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make start.sh executable
-RUN chmod +x start.sh
+COPY . .
 
-# Expose ports
-EXPOSE 8000 8501
+# Expose the Render port
+EXPOSE 8501
 
-# Start both apps
-CMD ["./start.sh"]
+# Run the main Streamlit app
+CMD ["streamlit", "run", "frontend/streamlit_main.py", "--server.port", "$PORT", "--server.address", "0.0.0.0"]
