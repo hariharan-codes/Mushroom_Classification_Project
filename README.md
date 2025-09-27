@@ -43,25 +43,16 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 ## 📂 Project Structure
 
 MUSHROOM_CLASSIFICATION_PROJECT/
-│
-├── data/                # Raw & processed datasets
-│
-├── frontend/            # Streamlit frontend
-│   ├── pages/           # Multi-page app (e.g., 1_Predict.py)
-│   └── streamlit_main.py
-│
-├── models/              # Saved trained models
-│
-├── src/                 # FastAPI backend + utilities
-│   ├── api.py
-│   ├── predict.py
-│   └── utils.py
-│
-├── train.py             # Model training + MLflow logging
-├── requirements.txt     # Dependencies
-├── Dockerfile           # Docker config
-├── start.sh             # Startup script (API + frontend)
-└── README.md            # Documentation
+├── data/            # Datasets
+├── frontend/        # Streamlit app
+├── models/          # Saved models
+├── src/             # FastAPI backend & utils
+├── train.py         # Training + MLflow logging
+├── requirements.txt # Dependencies
+├── Dockerfile       # Docker config
+├── start.sh         # Startup script
+└── README.md        # Docs
+
 
       
 ```
@@ -140,6 +131,7 @@ MUSHROOM_CLASSIFICATION_PROJECT/
 * Models compared in MLflow UI
 * Best model selected based on accuracy & F1 score
 * Fully interactive frontend allows users to classify mushrooms as **Edible** or **Poisonous**
+
 
 
 
