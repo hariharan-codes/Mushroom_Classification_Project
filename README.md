@@ -56,9 +56,9 @@ MUSHROOM_CLASSIFICATION_PROJECT
 │   └── streamlit_main.py
 │
 │── mlruns
-│   
-│   
-│   
+│   ├── .trash
+│   ├── 0
+│   └── 899880467396796702
 │
 │── models
 │
@@ -76,7 +76,7 @@ MUSHROOM_CLASSIFICATION_PROJECT
 │── README.md
 │── requirements.txt
 │── start.sh
-└── train.py           
+└── train.py      
 ```
 
 ---
@@ -153,6 +153,7 @@ MUSHROOM_CLASSIFICATION_PROJECT
 * Models compared in MLflow UI
 * Best model selected based on accuracy & F1 score
 * Fully interactive frontend allows users to classify mushrooms as **Edible** or **Poisonous**
+
 
 
 
