@@ -42,17 +42,41 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 
 ## 📂 Project Structure
 
-```
-├── frontend/
-│   ├── home.py             # Streamlit app - main UI
-│   ├── predict.py          # Prediction page
-├── src/
-│   ├── api.py              # FastAPI backend
-│   ├── model_utils.py      # Model loading and prediction logic
-├── requirements.txt        # Dependencies
-├── Dockerfile              # Docker container definition
-├── start.sh                # Start script for backend & frontend
-└── README.md               # Project documentation
+MUSHROOM_CLASSIFICATION_PROJECT
+│── data
+│   ├── processed
+│   └── raw
+│
+│── frontend
+│   ├── background
+│   ├── pages
+│   │   └── 1_Predict.py
+│   ├── utils
+│   │   └── api_client.py
+│   └── streamlit_main.py
+│
+│── mlruns
+│   
+│   
+│   
+│
+│── models
+│
+│── myenv
+│
+│── src
+│   ├── __pycache__
+│   ├── __init__.py
+│   ├── api.py
+│   ├── enums.py
+│   ├── predict.py
+│   └── utils.py
+│
+│── Dockerfile
+│── README.md
+│── requirements.txt
+│── start.sh
+└── train.py           
 ```
 
 ---
@@ -80,9 +104,8 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 2. Create and activate a virtual environment:
 
    ```bash
-   python -m venv venv
-   source venv/bin/activate   # Linux/Mac
-   venv\Scripts\activate      # Windows
+   python -m venv myenv
+   myenv\Scripts\activate     
    ```
 3. Install dependencies:
 
@@ -130,6 +153,7 @@ This project builds a **Mushroom Edible vs. Poisonous Classifier** using multipl
 * Models compared in MLflow UI
 * Best model selected based on accuracy & F1 score
 * Fully interactive frontend allows users to classify mushrooms as **Edible** or **Poisonous**
+
 
 
 
